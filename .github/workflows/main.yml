@@ -20,6 +20,9 @@ jobs:
         run: npm install -g @angular/cli@17.3.8
       - name: Install Ionic
         run: npm install -g @ionic/cli@7.2.0
+
+      - name: npm Install
+        run: npm install
         
       - name: Build Ionic web
         run: npm run build
