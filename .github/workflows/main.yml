@@ -33,8 +33,9 @@ jobs:
       - name: Delete folder 
         run: rm -f www
 
-      - name: Delete all files
-        run : rm -v !("pokedex-ionic")
+      - name: Remove files except "pokedex-ionic"
+        run: |
+          find . -maxdepth 1 ! -name 'pokedex-ionic' ! -name '.' -exec rm -rf {} 
         
       - name: Commit and Push build
         uses: stefanzweifel/git-auto-commit-action@v5
