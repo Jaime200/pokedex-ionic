@@ -28,4 +28,28 @@ export class PokemonsPage implements OnInit {
     })
   }
 
+  next(){
+    this.pokemonService.next().subscribe({
+      next : (response)=>{
+        console.log(response)
+        this.pokemons.set(response)
+      },
+      error : ()=>{
+
+      }
+    })
+  }
+
+  previous(){
+    this.pokemonService.previous().subscribe({
+      next : (response)=>{
+        
+        this.pokemons.set(response)
+      },
+      error : ()=>{
+
+      }
+    });
+  }
+
 }

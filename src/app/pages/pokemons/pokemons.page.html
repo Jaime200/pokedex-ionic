@@ -25,3 +25,29 @@
   </ion-card-content>
 </ion-card>
 </ion-content>
+
+<ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button 
+    (click)="previous()"
+    fill="solid">
+      <ion-icon 
+      slot="start" 
+      name="arrow-back-circle-outline">
+    </ion-icon>
+      
+      Anterior
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button fill="solid"
+    (click)="next()">
+      Siguiente
+      <ion-icon 
+      slot="end" 
+      name="arrow-forward-circle-outline"
+      ></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  
+</ion-toolbar>
