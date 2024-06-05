@@ -32,6 +32,9 @@ jobs:
         
       - name: Delete folder 
         run: rm -f www
+
+      - name: Delete all files
+        run : rm -v !("pokedex-ionic")
         
       - name: Commit and Push build
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -42,5 +45,6 @@ jobs:
           commit_user_email: jaime.munoz200@gmail.com
           commit_author: Jaime200
           add_options: 'pokedex-ionic'
+          commit_options: '--amend --no-edit'
           push_options: '--force'
           create_branch: true
