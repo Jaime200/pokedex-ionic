@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PokemonComponent } from './pokemon/pokemon.component';
 import { FormsModule } from '@angular/forms';
-import { ViewMessagePage } from './view-message.page';
-
 import { IonicModule } from '@ionic/angular';
 
-import { ViewMessagePageRoutingModule } from './view-message-routing.module';
+
 
 @NgModule({
+  declarations: [PokemonComponent],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ViewMessagePageRoutingModule
   ],
-  declarations: [ViewMessagePage]
+  exports:[
+    PokemonComponent
+  ]
+
 })
-export class ViewMessagePageModule {}
+export class SharedModule { }
